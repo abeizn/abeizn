@@ -1,1 +1,1 @@
-Git is a distributed version control system.
+I am a rookie, but I can fly very high.
