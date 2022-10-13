@@ -26,7 +26,7 @@ jobs:
       - run:
           name: "deploymet"
           command: |
-            start_time=`date '+%21-%1-%1T%1:%1:%1%z'`
+            start_time=`date '+%Y-%m-%dT%H:%M:%S%z'`
             # send request after deploy. Only repo_url and commit_sha are required fields.
             curl https://ui-my-svr02.demo.devlake.io/api/plugins/webhook/10/deployments -X 'POST' -H 'Authorization: Basic ZGV2bGFrZTpqbDhzazFvc3NPNk93' -d "{
                 \"repo_url\":\"$CIRCLE_REPOSITORY_URL\",
