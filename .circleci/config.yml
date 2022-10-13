@@ -24,7 +24,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "deploy"
+          name: "deploymet"
           command:
             # send request after deploy. Only repo_url and commit_sha are required fields.
             curl https://ui-my-svr02.demo.devlake.io/api/plugins/webhook/10/deployments -X 'POST' -d "{
@@ -38,4 +38,4 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-      - deploy
+      - deploymet
