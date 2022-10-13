@@ -18,7 +18,7 @@ jobs:
           name: "Say hello"
           command:   echo Hello, World!     
 
-  deploy:
+  deploymet:
     docker:
       - image: cimg/base:stable
     steps:
