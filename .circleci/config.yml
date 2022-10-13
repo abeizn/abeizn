@@ -26,12 +26,11 @@ jobs:
       - run:
           name: "deploymet"
           command: |
-            start_time=`date '+%Y-%m-%dT%H:%M:%S%z'`
+  
             # send request after deploy. Only repo_url and commit_sha are required fields.
             curl https://ui-my-svr02.demo.devlake.io/api/plugins/webhook/10/deployments -X 'POST' -H 'Authorization: Basic ZGV2bGFrZTpqbDhzazFvc3NPNk93' -d "{
                 \"repo_url\":\"$CIRCLE_REPOSITORY_URL\",
-                \"commit_sha\":\"$CIRCLE_SHA1\",
-                \"start_time\":\"$start_time\"
+                \"commit_sha\":\"$CIRCLE_SHA1\"
             }"
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
